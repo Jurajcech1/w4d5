@@ -1,0 +1,14 @@
+<h1><%= @post.title %></h1>
+
+<br>
+
+<%= @post.content %>
+
+<br>
+
+<%= @post.url %>
+
+<br>
+
+<%= link_to "back to sub", sub_url(@post.sub) %>
+<%= link_to "edit post", edit_post_url(@post) %>

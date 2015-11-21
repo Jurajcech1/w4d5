@@ -1,0 +1,20 @@
+<form action="<%= sub_url(@sub) %>" method="post">
+  <input type="hidden" name="_method" value="PATCH">
+
+<%= auth_token_input %>
+
+  <label for="sub_title"><h4>Sub Title</h4></label>
+  <input
+    type="text"
+    name="sub[title]"
+    id = "sub_title"
+    value="<%= @sub.title %>"
+    >
+    <br>
+
+    <label for="description">description</label>
+    <textarea id="description" name="sub[description]"> <%= @sub.description %> </textarea>
+
+    <br>
+    <input type="submit" value="edit sub">
+</form>

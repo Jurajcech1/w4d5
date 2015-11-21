@@ -1,0 +1,31 @@
+<h1>New Post</h1>
+
+<form action="<%= posts_url %>" method="post">
+
+<%= auth_token_input %>
+
+  <label for="post_title"><h4>Post Title</h4></label>
+  <input
+    type="text"
+    name="post[title]"
+    id = "post_title"
+    value="<%= @post.title %>"
+    >
+    <br>
+
+    <label for="content">content</label>
+    <textarea id="content" name="post[content]"> <%= @post.content %> </textarea>
+
+    <br>
+
+    <label for="post_url"><h4>Post url</h4></label>
+    <input
+      type="text"
+      name="post[url]"
+      id = "post_url"
+      value="<%= @post.url %>"
+      >
+
+      <br>
+    <input type="submit" value="create post">
+</form>
